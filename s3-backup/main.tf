@@ -43,7 +43,7 @@ resource "aws_s3_bucket_lifecycle_configuration" "this" {
     id     = "versioning-policy"
     status = "Enabled"
     expiration {
-      days = 45
+      days = var.expiration_days
     }
   }
 }
