@@ -47,6 +47,7 @@ resource "aws_s3_bucket_lifecycle_configuration" "this" {
   rule {
     id     = "versioning-policy"
     status = "Enabled"
+    prefix = var.lifecycle_rule_prefix
     expiration {
       days = var.expiration_days
     }
