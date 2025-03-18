@@ -1,3 +1,8 @@
+variable "lifecycle_rule_prefix" {
+  type    = string
+  default = ""
+}
+
 resource "aws_s3_bucket" "this" {
   bucket              = var.bucket
   bucket_prefix       = var.bucket_prefix
